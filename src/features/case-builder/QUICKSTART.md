@@ -8,11 +8,17 @@ All dependencies are already included in your project. No additional packages ne
 
 ### 2. Configuration
 
-The Groq API key is already configured in the service file. For production, move it to environment variables:
+You'll need to add your API keys to a `.env` file:
 
 ```bash
 # .env
-GROQ_API_KEY=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
+EXPO_PUBLIC_GROQ_API_KEY=gsk_your_key_here
+EXPO_PUBLIC_OPENAI_API_KEY=sk-proj-your_key_here
+```
+
+Get your keys from:
+- Groq: https://console.groq.com/keys
+- OpenAI: https://platform.openai.com/api-keys
 ```
 
 ### 3. Usage
