@@ -1,0 +1,216 @@
+import { AdvocateCardProps } from "@/components/ui/AdvocateCard";
+
+export const MOCK_ADVOCATES: AdvocateCardProps[] = [
+  {
+    id: "7",
+    name: "Adv. Harshit Joshi",
+    specialty: "Criminal & Civil Law",
+    rating: 4.9,
+    reviewCount: 78,
+    pricePerSession: 99,
+    sessionMinutes: 10,
+    imageUrl: "https://avatars.githubusercontent.com/u/240977433?v=4",
+    isOnline: true,
+    pastCasesReviews: [
+      {
+        id: "r1",
+        reviewerName: "Amit Tiwari",
+        rating: 5,
+        genre: "FIR & Police Complaint",
+        comment:
+          "Harshit bhai ne meri FIR turant darj karwa di jab police mana kar rahi thi. Bahut helpful aur fast!",
+        date: "1 week ago",
+      },
+      {
+        id: "r2",
+        reviewerName: "Anonymous",
+        rating: 5,
+        genre: "Bail Matter",
+        comment:
+          "Got bail within 24 hours. His knowledge of criminal procedure is exceptional.",
+        date: "3 weeks ago",
+      },
+      {
+        id: "r3",
+        reviewerName: "Preethi R.",
+        rating: 4.5,
+        genre: "Civil Dispute",
+        comment:
+          "Very practical advice. Helped me understand my rights clearly and saved me from a long court battle.",
+        date: "2 months ago",
+      },
+    ],
+    caseStats: [
+      { category: "FIR & Police Matters", count: 30, total: 78 },
+      { category: "Bail Hearings", count: 22, total: 78 },
+      { category: "Civil Disputes", count: 12, total: 78 },
+      { category: "Cyber Crime", count: 8, total: 78 },
+      { category: "Consumer Cases", count: 6, total: 78 },
+    ],
+  },
+  {
+    id: "8",
+    name: "Adv. Chandransh",
+    specialty: "Family & Property Law",
+    rating: 4.8,
+    reviewCount: 63,
+    pricePerSession: 99,
+    sessionMinutes: 10,
+    imageUrl: "https://avatars.githubusercontent.com/u/67635208?v=4",
+    isOnline: true,
+    pastCasesReviews: [
+      {
+        id: "r1",
+        reviewerName: "Sunita Verma",
+        rating: 5,
+        genre: "Property Dispute",
+        comment:
+          "Chandransh ji ne hamare zameen ke vivad ko bahut samajhdari se suljhaya. Poora paisa vasool!",
+        date: "2 weeks ago",
+      },
+      {
+        id: "r2",
+        reviewerName: "Deepak Nair",
+        rating: 5,
+        genre: "Divorce Settlement",
+        comment:
+          "Handled a very sensitive divorce case with complete professionalism. Highly recommended.",
+        date: "1 month ago",
+      },
+      {
+        id: "r3",
+        reviewerName: "Anonymous",
+        rating: 4.5,
+        genre: "Will & Inheritance",
+        comment:
+          "Clear guidance on inheritance rights. Drafted the will perfectly and explained every clause.",
+        date: "3 months ago",
+      },
+    ],
+    caseStats: [
+      { category: "Property Disputes", count: 25, total: 63 },
+      { category: "Divorce & Separation", count: 18, total: 63 },
+      { category: "Will & Inheritance", count: 10, total: 63 },
+      { category: "Child Custody", count: 7, total: 63 },
+      { category: "Tenant & Landlord", count: 3, total: 63 },
+    ],
+  },
+  {
+    id: "1",
+    name: "Adv. Tushar Jaguri",
+    specialty: "Family Law & Divorce",
+    rating: 4.9,
+    reviewCount: 124,
+    pricePerSession: 149,
+    sessionMinutes: 15,
+    imageUrl:
+      "https://scontent.fdel27-4.fna.fbcdn.net/v/t39.30808-6/644560831_2446343652484462_7781690485146382848_n.jpg?_nc_cat=100&ccb=1-7&_nc_sid=7b2446&_nc_ohc=z8V0jlkR-XUQ7kNvwFO4ga2&_nc_oc=AdrQ3accHlhw0RpGuqva4rdAd1xPJUEUU0lEAlNH0UjGsioSqvHo5qtbwobMMGkiRkS0ODbDHqGckKeKznKV-h1b&_nc_zt=23&_nc_ht=scontent.fdel27-4.fna&_nc_gid=6V5oY9kQYj3RuwuggRDZ9w&_nc_ss=7a30f&oh=00_AfzaKa_7TdGKuFwDWulVxQVS4fNXzLrfk9P_yICxfnTLTA&oe=69CED5AB",
+    isOnline: true,
+    pastCasesReviews: [
+      {
+        id: "r1",
+        reviewerName: "Anonymous",
+        rating: 5,
+        genre: "Divorce & Custody",
+        comment:
+          "Adv. Priya handled my case with extreme sensitivity and professionalism. Got the custody rights as I hoped for.",
+        date: "2 weeks ago",
+      },
+      {
+        id: "r2",
+        reviewerName: "Rajesh Kumar",
+        rating: 4.5,
+        genre: "Property Dispute",
+        comment:
+          "Very knowledgeable and strategic. Helped resolve a long-standing family property issue amicably.",
+        date: "1 month ago",
+      },
+      {
+        id: "r3",
+        reviewerName: "Sonia M.",
+        rating: 5,
+        genre: "Alimony Settlement",
+        comment:
+          "Excellent negotiation skills. Secured a fair settlement for me without prolonged court battles.",
+        date: "2 months ago",
+      },
+    ],
+    caseStats: [
+      { category: "Divorce & Separation", count: 45, total: 120 },
+      { category: "Child Custody", count: 32, total: 120 },
+      { category: "Alimony Claims", count: 18, total: 120 },
+      { category: "Domestic Violence", count: 12, total: 120 },
+      { category: "Adoption", count: 8, total: 120 },
+      { category: "Property Disputes", count: 3, total: 120 },
+      { category: "Will Drafting", count: 2, total: 120 },
+    ],
+  },
+  {
+    id: "2",
+    name: "Adv. Riya Rawat",
+    specialty: "Criminal Defense",
+    rating: 4.8,
+    reviewCount: 89,
+    pricePerSession: 99,
+    sessionMinutes: 10,
+    imageUrl: "https://i.pravatar.cc/150?u=rahul",
+    isOnline: false,
+    pastCasesReviews: [
+      {
+        id: "r1",
+        reviewerName: "Sandeep S.",
+        rating: 5,
+        genre: "Bail Hearing",
+        comment:
+          "Excellent arguments in court. Got bail approved in record time despite complications.",
+        date: "3 weeks ago",
+      },
+      {
+        id: "r2",
+        reviewerName: "Anonymous",
+        rating: 4,
+        genre: "Traffic Violation",
+        comment: "Good advice, helped reduce the penalty significantly.",
+        date: "2 months ago",
+      },
+      {
+        id: "r3",
+        reviewerName: "Mohit K.",
+        rating: 5,
+        genre: "Cyber Crime",
+        comment:
+          "Very tech-savvy lawyer. Understood the digital evidence perfectly and cleared my name.",
+        date: "4 months ago",
+      },
+    ],
+    caseStats: [
+      { category: "Bail Matters", count: 40, total: 80 },
+      { category: "Cyber Crime", count: 15, total: 80 },
+      { category: "Fraud & Cheating", count: 12, total: 80 },
+      { category: "Traffic Offenses", count: 8, total: 80 },
+      { category: "Assault Cases", count: 5, total: 80 },
+    ],
+  },
+  {
+    id: "4",
+    name: "Adv. Isha Thapliyal",
+    specialty: "Property & Real Estate",
+    rating: 4.7,
+    reviewCount: 56,
+    pricePerSession: 89,
+    sessionMinutes: 9,
+    imageUrl: "https://i.pravatar.cc/150?u=vikram",
+    isOnline: true,
+  },
+  {
+    id: "6",
+    name: "Adv. Arjun Das",
+    specialty: "Labor & Employment",
+    rating: 4.6,
+    reviewCount: 42,
+    pricePerSession: 79,
+    sessionMinutes: 8,
+    imageUrl: "https://i.pravatar.cc/150?u=arjun",
+    isOnline: true,
+  },
+];

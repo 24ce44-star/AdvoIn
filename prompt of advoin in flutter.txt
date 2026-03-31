@@ -1,0 +1,457 @@
+prompt of advoin in flutter 
+
+    📱 Flutter App Development Prompt - AdvoIn (Legal Buddy)
+
+      1 Build a production-ready Flutter legal consulting platform called "AdvoIn" (Legal Buddy) - a dual-platform app connecting clients with advocates, featuring AI-powered legal assistance.
+      2
+      3 ## 🎯 APP OVERVIEW
+      4
+      5 Create a complete legal tech marketplace with:
+      6 - Client app (find lawyers, AI case builder, consultations)
+      7 - Advocate app (dashboard, case management, earnings)
+      8 - AI-powered legal assistant (chat, document drafting)
+      9 - Real-time messaging & video consultations
+     10
+     11 ## 📦 TECH STACK REQUIREMENTS
+     12
+     13 **Framework:** Flutter 3.x (Dart)
+     14 **State Management:** Riverpod or Bloc
+     15 **Backend:** Firebase OR Supabase (auth, database, storage)
+     16 **AI Integration:** Groq API (Llama 3.3 70B)
+     17 **Real-time:** WebSocket for chat
+     18 **Video Calls:** Agora SDK or WebRTC
+     19 **Local Storage:** Hive or SharedPreferences
+     20 **Navigation:** GoRouter
+     21 **Styling:** Custom theme with dark mode support
+     22
+     23 ## 🏗️ ARCHITECTURE
+     24
+     25 Use Clean Architecture:
+     26 - Presentation Layer (Screens, Widgets, Providers)
+     27 - Domain Layer (Entities, Use Cases, Repositories)
+     28 - Data Layer (Models, API Services, Local Cache)
+     29
+     30 Folder Structure:
+    lib/
+    ├── core/
+    │   ├── constants/
+    │   ├── theme/
+    │   ├── utils/
+    │   └── widgets/
+    ├── features/
+    │   ├── auth/
+    │   ├── client_home/
+    │   ├── advocate_discovery/
+    │   ├── ai_case_builder/
+    │   ├── chat/
+    │   ├── ai_chat/
+    │   ├── profile/
+    │   ├── advocate_dashboard/
+    │   └── video_call/
+    ├── services/
+    ├── models/
+    └── providers/
+
+      1
+      2 ## 🎨 DESIGN SYSTEM
+      3
+      4 **Color Palette:**
+      5 - Primary Navy: #0F172A
+      6 - Secondary Steel: #3B82F6
+      7 - Slate: #64748B
+      8 - Ice (Light BG): #F8FAFC
+      9 - Charcoal (Dark BG): #1A1A1A
+     10 - Crimson (Accent): #E11D48
+     11
+     12 **Typography:**
+     13 - Headings: Bold, 24-32px
+     14 - Body: Regular, 14-16px
+     15 - Caption: Medium, 11-13px
+     16
+     17 **Theme:** Full dark/light mode support
+     18
+     19 ## 📱 CORE FEATURES TO IMPLEMENT
+     20
+     21 ### 1️⃣ AUTHENTICATION
+     22 - Email/password login & registration
+     23 - JWT token management
+     24 - Biometric authentication
+     25 - Password reset flow
+     26 - Session persistence
+     27
+     28 ### 2️⃣ CLIENT HOME SCREEN
+     29 - Hero section with branding
+     30 - Smart search bar with intent detection
+     31 - Quick category chips (FIR, Property, Family, Contract)
+     32 - Category grid (Family, Corporate, Property, Criminal)
+     33 - Top advocates horizontal list
+     34 - Animated scroll effects
+     35
+     36 ### 3️⃣ ADVOCATE DISCOVERY
+     37 - Advanced search with filters
+     38 - Category-based browsing
+     39 - Sort by: Rating, Price, Reviews
+     40 - Availability filter (Online Now)
+     41 - Advocate cards with:
+     42   - Profile image, name, specialty
+     43   - Rating stars & review count
+     44   - Pricing per consultation
+     45   - Online status indicator
+     46   - "Book Consultation" CTA
+     47 - Buddy Orb (AI matchmaker floating button)
+     48
+     49 ### 4️⃣ AI CASE BUILDER ⭐ (Premium Feature)
+     50 - Conversational AI interface (one question at a time)
+     51 - Groq API integration for legal AI
+     52 - Interactive inputs:
+     53   - Suggestion chips
+     54   - Multiple choice questions
+     55   - Free text with validation
+     56 - Case categories: Family, Corporate, Property, Criminal
+     57 - Real-time preview mode
+     58 - Edit functionality for all fields
+     59 - Case completeness validation
+     60 - Generate case report (PDF export)
+     61 - Conversation history
+     62
+     63 **AI Flow:**
+    User opens → AI greets → Asks case type →
+    Follow-up questions → Extracts details →
+    Preview → Edit → Finalize → Generate PDF
+
+       1
+       2 ### 5️REAL-TIME CHAT SYSTEM
+       3 - GiftedChat or custom chat UI
+       4 - Text messages with read receipts
+       5 - **Voice Messages:**
+       6   - Record with pan gestures
+       7   - Swipe-to-cancel
+       8   - Lock recording
+       9   - Audio waveform visualizer
+      10   - Playback with scrubbing
+      11 - **Media Sharing:**
+      12   - Image capture & gallery
+      13   - Document upload (PDF, DOC)
+      14   - Video recording
+      15 - Message status (sending, sent, delivered, read)
+      16 - Sticky date headers
+      17 - Full-screen image preview
+      18 - Share chat functionality
+      19 - Download media
+      20
+      21 ### 6️⃣ AI CHAT ASSISTANT
+      22 - Legal AI powered by Groq API
+      23 - Indian law specialization
+      24 - Multi-language support:
+      25   - English
+      26   - Hindi (Devanagari)
+      27   - Hinglish
+      28   - Urdu
+      29   - Tamil
+      30   - Telugu
+      31 - **PDF Document Generation:**
+      32   - Legal notices
+      33   - Applications
+      34   - Contracts
+      35   - Trigger: `[DRAFT_DOCUMENT: {...}]`
+      36 - **Voice Mode:**
+      37   - Text-to-speech responses
+      38   - Premium AI voices
+      39   - Multi-language TTS
+      40 - **Image Analysis:**
+      41   - Document OCR
+      42   - Extract text from images
+      43 - Chat history with search
+      44 - Custom themes & emojis per chat
+      45 - Streaming responses
+      46
+      47 ### 7️VIDEO/AUDIO CALLS
+      48 - 1-on-1 video consultations
+      49 - Audio-only calls
+      50 - Call scheduling
+      51 - In-call controls:
+      52   - Mute/unmute
+      53   - Switch camera
+      54   - End call
+      55   - Chat during call
+      56 - Call quality indicators
+      57
+      58 ### 8️⃣ ADVOCATE DASHBOARD
+      59 - Stats overview:
+      60   - Active cases
+      61   - Pending requests
+      62   - Total earnings
+      63   - Average rating
+      64 - Quick actions:
+      65   - New Case button
+      66   - Schedule manager
+      67   - Drafts folder
+      68 - Client Pipeline:
+      69   - Direct requests
+      70   - Daily auto-matched slots
+      71   - Progress bars
+      72 - Today's Schedule:
+      73   - Meeting cards with time
+      74   - Video/In-person badges
+      75   - "Join Call" buttons
+      76 - Recent Activity feed
+      77
+      78 ### 9️⃣ PROFILE & SETTINGS
+      79 - User stats display
+      80 - Premium membership banner
+      81 - Settings menu:
+      82   - Personal Information
+      83   - Notifications
+      84   - Security & Privacy
+      85   - Payment methods
+      86   - App preferences
+      87 - Logout functionality
+      88
+      89 ### 🔟 CASE REPORT SCREEN
+      90 - Generated case summaries
+      91 - PDF preview
+      92 - Download/Share options
+      93 - Print functionality
+      94
+      95 ## 🧩 KEY WIDGETS TO BUILD
+      96
+      97 ### UI Components
+      98 - `CustomButton` (with variants: primary, secondary, outline, ghost)
+      99 - `CustomTextField` (with validation)
+     100 - `Avatar` (with online status)
+     101 - `Badge` (status indicators)
+     102 - `AdvocateCard` (listing card)
+     103 - `CaseCard` (case summary)
+     104 - `MessageBubble` (chat)
+     105 - `AudioPlayer` (voice messages)
+     106 - `TypingIndicator` (AI)
+     107 - `SuggestionChips` (horizontal scroll)
+     108 - `BuddyOrb` (floating AI button)
+     109 - `MatchmakerOverlay` (AI matching)
+     110
+     111 ### Feature Widgets
+     112 - `CaseBuilderConversation` (AI chat interface)
+     113 - `VoiceRecorder` (pan gesture recording)
+     114 - `DocumentPreview` (PDF viewer)
+     115 - `VideoCallView` (Agora integration)
+     116 - `AdvocateList` (grid/list view)
+     117 - `CategoryGrid` (bento-style)
+     118 - `StatsCard` (dashboard stats)
+     119
+     120 ## 🔌 SERVICES TO IMPLEMENT
+     121
+     122 ### API Services
+    abstract class ApiService {
+      Future<Response> get(String path);
+      Future<Response> post(String path, dynamic data);
+      Future<Response> put(String path, dynamic data);
+      Future<Response> delete(String path);
+    }
+
+    class GroqService {
+      Future<String> chatCompletion(List<Message> messages);
+      Future<IntentResult> detectIntent(String text);
+      Future<ChatMetadata> generateMetadata(String conversation);
+      Future<String> streamResponse(List<Message> messages);
+    }
+
+    class ChatService {
+      Stream<List<Message>> getMessages(String chatId);
+      Future<void> sendMessage(Message message);
+      Future<void> sendVoiceMessage(String url, int duration);
+      Future<void> sendImage(String url);
+    }
+
+    class VideoCallService {
+      Future<void> startCall(String userId, bool isVideo);
+      Future<void> endCall();
+      Stream<CallState> get callStateStream;
+    }
+
+     1
+     2 ### State Management (Riverpod Example)
+    // Auth Provider
+    final authStateProvider = StreamProvider<AuthState>((ref) {...});
+    final authControllerProvider = StateNotifierProvider<AuthController, AuthState>((ref) {...});
+
+    // Chat Provider
+    final chatProvider = StateNotifierProvider<ChatController, ChatState>((ref) {...});
+
+    // AI Chat Provider
+    final aiChatProvider = StateNotifierProvider<AIChatController, AIChatState>((ref) {...});
+
+    // Case Builder Provider
+    final caseBuilderProvider = StateNotifierProvider<CaseBuilderController, CaseBuilderState>((ref) {...});
+
+    // Advocate Provider
+    final advocatesProvider = FutureProvider<List<Advocate>>((ref) {...});
+
+     1
+     2 ## 📊 DATA MODELS
+    class User {
+      String id;
+      String name;
+      String email;
+      String phone;
+      String? avatar;
+      bool isPremium;
+      DateTime createdAt;
+    }
+
+    class Advocate {
+      String id;
+      String name;
+      String specialty;
+      int experienceYears;
+      double rating;
+      int reviewCount;
+      double pricePerSession;
+      bool isOnline;
+      List<String> categories;
+      String bio;
+      List<String> availability;
+    }
+
+    class Case {
+      String id;
+      String userId;
+      String category;
+      String description;
+      List<String> parties;
+      DateTime incidentDate;
+      List<String> evidence;
+      List<String> witnesses;
+      String status;
+      DateTime createdAt;
+    }
+
+    class Message {
+      String id;
+      String chatId;
+      String senderId;
+      String content;
+      MessageType type; // text, image, voice, document
+      String? mediaUrl;
+      int? duration; // for voice
+      DateTime timestamp;
+      MessageStatus status; // sending, sent, delivered, read
+    }
+
+    class AIChat {
+      String id;
+      String title;
+      String? emoji;
+      String? themeColor;
+      List<AIMessage> messages;
+      DateTime createdAt;
+      DateTime updatedAt;
+    }
+
+      1
+      2 ## 🎯 ACCEPTANCE CRITERIA
+      3
+      4 ### Must-Have Features
+      5 - ✅ Smooth 60fps animations
+      6 - ✅ Full dark/light theme support
+      7 - ✅ Offline-first architecture
+      8 - ✅ Real-time chat with WebSocket
+      9 - ✅ AI responses < 2 seconds
+     10 - ✅ Voice message recording & playback
+     11 - ✅ PDF generation & preview
+     12 - ✅ Video calling integration
+     13 - ✅ Multi-language support
+     14 - ✅ Secure authentication
+     15
+     16 ### Performance Targets
+     17 - App launch: < 2 seconds
+     18 - Screen transitions: < 300ms
+     19 - Chat message delivery: < 500ms
+     20 - AI response streaming: immediate
+     21 - Image loading: lazy with cache
+     22
+     23 ### Security Requirements
+     24 - JWT token refresh
+     25 - Encrypted local storage
+     26 - Secure API communication (HTTPS)
+     27 - Input validation
+     28 - Rate limiting
+     29
+     30 ## 📦 DEPENDENCIES TO USE
+    dependencies:
+      flutter:
+        sdk: flutter
+
+    State Management
+      flutter_riverpod: ^2.4.0
+      riverpod_annotation: ^2.3.0
+
+    Navigation
+      go_router: ^12.0.0
+
+    Network
+      dio: ^5.4.0
+      web_socket_channel: ^2.4.0
+
+    Local Storage
+      hive: ^2.2.3
+      hive_flutter: ^1.1.0
+      shared_preferences: ^2.2.2
+
+    AI
+      http: ^1.1.0 # For Groq API
+
+    Media
+      image_picker: ^1.0.4
+      file_picker: ^6.1.1
+      audioplayers: ^5.2.1
+      record: ^5.0.4
+
+    Video Call
+      agora_rtc_engine: ^6.3.0
+
+    PDF
+      pdf: ^3.10.7
+      printing: ^5.11.1
+
+    UI
+      flutter_animate: ^4.3.0
+      shimmer: ^3.0.0
+      cached_network_image: ^3.3.0
+
+    Utilities
+      intl: ^0.18.1
+      uuid: ^4.2.1
+      dartz: ^0.10.1 # Either type
+
+      1
+      2 ## 🚀 DELIVERABLES
+      3
+      4 1. **Complete Flutter app** with all screens
+      5 2. **Reusable component library** (20+ widgets)
+      6 3. **API integration** (Groq, Firebase/Supabase)
+      7 4. **State management** setup
+      8 5. **Theme system** with dark mode
+      9 6. **Documentation** for setup & deployment
+     10 7. **Build configuration** for iOS & Android
+     11
+     12 ## 🎨 DESIGN REFERENCES
+     13
+     14 - Clean, modern legal tech aesthetic
+     15 - Apple Human Interface Guidelines
+     16 - Material Design 3 principles
+     17 - Smooth Reanimated-style animations
+     18 - Premium feel throughout
+     19
+     20 ## 📱 PLATFORM SUPPORT
+     21
+     22 - iOS 13+
+     23 - Android 8.0+ (API 26)
+     24 - Responsive for phones & tablets
+     25
+     26 ---
+     27
+     28 **Build this as a production-ready, scalable app that can handle 10,000+ users with real-time features, AI integration, and premium UX throughout.**
+
+    ---
+
+    This prompt gives Flutter developers/AI everything needed to rebuild your AdvoIn app with all features intact! 🚀

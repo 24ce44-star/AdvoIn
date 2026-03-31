@@ -1,0 +1,1383 @@
+components of AdvoIn
+
+    📱 AdvoIn (Legal Buddy) - Complete Components & Features List
+
+    ---
+
+    🎯 APP OVERVIEW
+    AdvoIn is a dual-platform legal consulting app connecting clients with advocates, featuring AI-powered legal assistance and case building.
+
+    ---
+
+    📋 COMPLETE FEATURE LIST
+
+    1. AUTHENTICATION SYSTEM
+     - Login screen
+     - Registration screen
+     - Email/password authentication
+     - Session management (Zustand store)
+     - Secure logout
+
+    ---
+
+    2. CLIENT APP FEATURES
+
+    🏠 Home Screen
+     - Hero section with branding
+     - AI Legal Issue Input Builder
+       - Smart text input with intent detection
+       - Quick suggestion chips (FIR, Property, Family, Contract)
+       - Auto-routes to Case Builder or Advocate Finder
+     - Category quick access (Family, Corporate, Property, Criminal)
+     - Top Advocates showcase
+     - Animated header with scroll effects
+
+    🔍 Explore Screen (Advocate Discovery)
+     - Search & Filter System
+       - Real-time search bar
+       - Category-based filtering
+       - Sort options (Rating, Price, Reviews)
+       - Availability filter (Online Now)
+     - Bento Grid Category Browser
+       - Criminal Defense
+       - Family & Divorce
+       - Property & Real Estate
+       - Legal Documents
+       - Intellectual Property
+       - Corporate & Business
+     - Legal Insights Section
+       - Courses
+       - Quick Guides
+       - Tutorials
+     - Buddy Orb - AI Matchmaker overlay
+     - Advocate cards with:
+       - Profile image
+       - Name, specialty, experience
+       - Rating & review count
+       - Pricing
+       - Online status
+       - Video call capability
+
+    ⚖️ AI Case Builder (Premium Feature)
+     - Conversational AI Interface
+       - One-question-at-a-time flow
+       - Natural language processing (Groq API)
+       - Context-aware questioning
+       - Smart follow-up questions
+     - Interactive Input Methods
+       - Suggestion chips
+       - MCQ options
+       - Free text input
+       - Typing indicator
+     - Case Categories
+       - Family law
+       - Corporate law
+       - Property disputes
+       - Criminal defense
+     - User Control Features
+       - Preview mode (toggle anytime)
+       - Edit any field
+       - Refine AI-generated content
+       - Completeness validation
+       - Case history modal
+     - AI-Powered Features
+       - Intent detection
+       - Gap identification
+       - Summary generation
+       - Markdown support
+       - Case report generation
+
+    💬 Chat System
+     - Consultation Chat Screen
+       - Real-time messaging (Gifted Chat)
+       - Advanced Voice Features
+         - Voice recording with pan gestures
+         - Swipe-to-cancel
+         - Lock recording
+         - Live audio visualizer
+         - Audio playback with scrubbing
+       - Media Sharing
+         - Image capture & upload
+         - Document sharing
+         - Video recording
+         - File attachments
+       - Message Features
+         - Read receipts
+         - Timestamps
+         - Message status (sent/received/pending)
+         - Sticky date headers
+       - Attachment Menu
+         - Camera
+         - Gallery
+         - Documents
+         - Location
+       - Full-screen image preview
+       - Share chat functionality
+       - Download media
+
+    🤖 AI Chat (Buddy AI)
+     - AI Legal Assistant
+       - Indian law specialization
+       - Multi-language support (English, Hindi, Hinglish, Urdu, Tamil, Telugu)
+       - PDF Generation Protocol
+         - Legal document drafting
+         - Application generation
+         - Notice drafting
+       - Voice Mode
+         - Text-to-speech responses
+         - Premium AI voice (OpenAI TTS)
+         - Multi-language TTS
+       - Image Analysis
+         - Document OCR
+         - AI detection from EXIF data
+       - Chat history management
+       - Custom themes & emojis
+       - Streaming responses
+
+    👤 Profile Screen
+     - User stats (Active Cases, Consults, Saved)
+     - Premium membership banner
+     - Settings Menu
+       - Personal Information
+       - Notifications
+       - Security & Privacy
+       - Payments
+       - App Settings
+     - Secure logout
+
+    ---
+
+    3. ADVOCATE APP FEATURES
+
+    📊 Advocate Dashboard
+     - Quick Actions
+       - New Case
+       - Schedule
+       - Drafts
+     - Stats Grid
+       - Active Cases
+       - Pending Requests
+       - Total Earnings
+       - Rating
+     - Client Pipeline
+       - Direct Requests
+       - Daily Pool (auto-matched slots)
+       - Progress tracking
+     - Today's Schedule
+       - Video calls
+       - In-person meetings
+       - Join call buttons
+     - Recent Activity
+       - Payment notifications
+       - Case updates
+
+    💰 Earnings Screen
+     - Revenue tracking
+     - Payment history
+     - Withdrawal options
+
+    📁 Cases Screen
+     - Case management
+     - Client communications
+     - Document organization
+
+    ⚙️ Settings Screen
+     - Profile management
+     - Availability settings
+     - Notification preferences
+
+    ---
+
+    4. SHARED FEATURES
+
+    📞 Call/Video Consultation
+     - Video calling interface
+     - Audio calling
+     - Call scheduling
+     - Join meeting screens
+
+    📄 Case Report Screen
+     - Generated case summaries
+     - PDF export
+     - Document preview
+     - Print functionality
+
+    🔔 Notifications
+     - Push notifications
+     - In-app notifications
+     - Notification center
+
+    ---
+
+    🧩 COMPONENT BREAKDOWN
+
+    UI Components (src/components/ui/)
+     1. Avatar - User profile images
+     2. Badge - Status indicators
+     3. Button - Animated buttons with variants
+     4. Input - Text inputs with validation
+     5. ThemedText - Typography with theme support
+     6. AdvocateCard - Advocate listing cards
+
+    Feature Components
+
+    Case Builder (src/features/case-builder/)
+     - CaseBuilderScreen - Main conversation interface
+     - CaseBuilderInput - Custom input with send button
+     - CasePreviewCard - Editable case summary
+     - ConversationMessage - AI/user message display
+     - QuestionOptions - MCQ selections
+     - SuggestionChips - Quick-reply chips
+     - TypingIndicator - AI thinking animation
+     - CaseHistoryModal - History browser
+     - CaseListItem - Case list items
+     - CaseReportScreen - Report generation
+
+    Buddy AI (src/features/buddy-ai/)
+     - BuddyOrb - AI assistant floating button
+     - MatchmakerOverlay - AI matching interface
+
+    Advocates (src/features/advocates/)
+     - AdvocateList - FlashList of advocates
+     - AdvocateProfileScreen - Detailed profile view
+     - AdvocateDashboard - Advocate home screen
+
+    Consultation (src/features/consultation/)
+     - ChatScreen - Full-featured chat
+     - CallScreen - Video/audio calls
+
+    ---
+
+    Context & State Management
+
+    Context Providers
+     - HeaderContext - Shared header state
+     - AuthContext - Authentication state
+
+    Zustand Stores
+     - authStore - User authentication
+     - useAdvocateStore - Advocate data
+     - useCaseStore - Case builder state
+     - useAIChatStore - AI chat history
+
+    ---
+
+    Services & Utilities
+
+    API Services
+     - GroqService - AI/LLM integration
+       - Chat completion
+       - Intent detection
+       - Chat metadata generation
+       - PDF trigger parsing
+       - Voice generation
+
+    Mock Data
+     - mockAdvocates - Sample advocate data
+     - mockChat - Sample conversations
+
+    Utilities
+     - caseValidation - Case completeness checks
+     - aiParser - AI response parsing
+     - navigationConfig - Navigation setup
+     - utils - Helper functions (cn, etc.)
+
+    ---
+
+    Hooks
+     - useLegalTheme - Theme management
+     - useScreenTransition - Animation transitions
+     - useCaseBuilder - Case builder logic
+
+    ---
+
+    Constants
+     - caseCategories - Case type definitions
+     - Colors - Theme color palettes
+
+    ---
+
+    Types
+     - case.types.ts - TypeScript interfaces for cases
+
+    ---
+
+    🎨 DESIGN SYSTEM
+
+    Color Palette
+     - Navy (Primary)
+     - Steel (Secondary)
+     - Slate (Neutral)
+     - Ice (Background)
+     - Charcoal (Text)
+     - Crimson (Accent)
+
+    Typography
+     - h1, h2, h3 - Headings
+     - body - Body text
+     - caption - Small text
+
+    Animations
+     - Reanimated transitions
+     - Spring physics
+     - Fade in/out
+     - Layout animations
+     - Gesture-based interactions
+
+    ---
+
+    🔧 TECHNICAL STACK
+
+    Core
+     - React Native 0.81.5
+     - Expo SDK 54
+     - TypeScript
+     - NativeWind (Tailwind CSS)
+
+    Navigation
+     - Expo Router 6.0
+     - React Navigation 7.x
+
+    State Management
+     - Zustand
+
+    UI/UX
+     - React Native Reanimated
+     - Lucide Icons
+     - Custom components
+
+    AI/ML
+     - Groq API (Llama 3.3 70B)
+     - OpenAI TTS (Premium voice)
+     - Expo Speech
+
+    Media
+     - expo-av (Audio/Video)
+     - expo-image-picker
+     - expo-document-picker
+     - react-native-gifted-chat
+     - react-native-markdown-display
+
+    Storage
+     - AsyncStorage
+
+    Utilities
+     - clsx
+     - tailwind-merge
+
+    ---
+
+    📱 SCREEN MAP
+
+    Client Routes
+
+      1 /(client)/(tabs)/
+      2   ├── index.tsx (Home)
+      3   ├── explore.tsx (Find Advocates)
+      4   ├── create-case.tsx (AI Case Builder)
+      5   ├── chats.tsx (Messages)
+      6   └── profile.tsx (Profile)
+      7
+      8 /chat/[id].tsx (Consultation Chat)
+      9 /chat/ai/[id].tsx (AI Chat)
+     10 /call/[id].tsx (Video Call)
+     11 /case-report/[id].tsx (Case Report)
+     12 /advocate/[id].tsx (Advocate Profile)
+
+    Advocate Routes
+
+     1 /(advocate)/(tabs)/
+     2   ├── index.tsx (Dashboard)
+     3   ├── cases.tsx (Cases)
+     4   ├── earnings.tsx (Earnings)
+     5   └── settings.tsx (Settings)
+
+    Auth Routes
+
+     1 /(auth)/
+     2   ├── index.tsx (Login)
+     3   └── register.tsx (Signup)
+
+    ---
+
+    ✨ KEY HIGHLIGHTS
+
+     1. Dual-Platform - Separate interfaces for Clients & Advocates
+     2. AI-Powered - Groq-powered legal assistant & case builder
+     3. Voice Features - Advanced voice recording & TTS
+     4. Multi-lingual - 6+ Indian languages supported
+     5. PDF Generation - Legal document drafting
+     6. Real-time Chat - Full-featured messaging
+     7. Video Consultations - Built-in calling
+     8. Smart Matching - AI advocate matching
+     9. Dark Mode - Full theme support
+     10. Offline-First - AsyncStorage persistence
+
+    ---
+
+    This comprehensive list covers all components, features, and capabilities of your AdvoIn (Legal Buddy) app! You can use this for prompt engineering, documentation, or feature planning. 🚀⚖️
+
+  > write me a prompt for fullter
+
+  ✦ The user wants me to create a Flutter version of their React Native LegalBuddy app, so I'll write a comprehensive prompt that captures all the features, components, and technical requirements needed for a
+    Flutter developer or AI to rebuild the app.
+
+  ✦ Here's a comprehensive Flutter prompt for rebuilding your AdvoIn app:
+
+    ---
+
+    📱 Flutter App Development Prompt - AdvoIn (Legal Buddy)
+
+      1 Build a production-ready Flutter legal consulting platform called "AdvoIn" (Legal Buddy) - a dual-platform app connecting clients with advocates, featuring AI-powered legal assistance.
+      2
+      3 ## 🎯 APP OVERVIEW
+      4
+      5 Create a complete legal tech marketplace with:
+      6 - Client app (find lawyers, AI case builder, consultations)
+      7 - Advocate app (dashboard, case management, earnings)
+      8 - AI-powered legal assistant (chat, document drafting)
+      9 - Real-time messaging & video consultations
+     10
+     11 ## 📦 TECH STACK REQUIREMENTS
+     12
+     13 **Framework:** Flutter 3.x (Dart)
+     14 **State Management:** Riverpod or Bloc
+     15 **Backend:** Firebase OR Supabase (auth, database, storage)
+     16 **AI Integration:** Groq API (Llama 3.3 70B)
+     17 **Real-time:** WebSocket for chat
+     18 **Video Calls:** Agora SDK or WebRTC
+     19 **Local Storage:** Hive or SharedPreferences
+     20 **Navigation:** GoRouter
+     21 **Styling:** Custom theme with dark mode support
+     22
+     23 ## 🏗️ ARCHITECTURE
+     24
+     25 Use Clean Architecture:
+     26 - Presentation Layer (Screens, Widgets, Providers)
+     27 - Domain Layer (Entities, Use Cases, Repositories)
+     28 - Data Layer (Models, API Services, Local Cache)
+     29
+     30 Folder Structure:
+    lib/
+    ├── core/
+    │   ├── constants/
+    │   ├── theme/
+    │   ├── utils/
+    │   └── widgets/
+    ├── features/
+    │   ├── auth/
+    │   ├── client_home/
+    │   ├── advocate_discovery/
+    │   ├── ai_case_builder/
+    │   ├── chat/
+    │   ├── ai_chat/
+    │   ├── profile/
+    │   ├── advocate_dashboard/
+    │   └── video_call/
+    ├── services/
+    ├── models/
+    └── providers/
+
+      1
+      2 ## 🎨 DESIGN SYSTEM
+      3
+      4 **Color Palette:**
+      5 - Primary Navy: #0F172A
+      6 - Secondary Steel: #3B82F6
+      7 - Slate: #64748B
+      8 - Ice (Light BG): #F8FAFC
+      9 - Charcoal (Dark BG): #1A1A1A
+     10 - Crimson (Accent): #E11D48
+     11
+     12 **Typography:**
+     13 - Headings: Bold, 24-32px
+     14 - Body: Regular, 14-16px
+     15 - Caption: Medium, 11-13px
+     16
+     17 **Theme:** Full dark/light mode support
+     18
+     19 ## 📱 CORE FEATURES TO IMPLEMENT
+     20
+     21 ### 1️⃣ AUTHENTICATION
+     22 - Email/password login & registration
+     23 - JWT token management
+     24 - Biometric authentication
+     25 - Password reset flow
+     26 - Session persistence
+     27
+     28 ### 2️⃣ CLIENT HOME SCREEN
+     29 - Hero section with branding
+     30 - Smart search bar with intent detection
+     31 - Quick category chips (FIR, Property, Family, Contract)
+     32 - Category grid (Family, Corporate, Property, Criminal)
+     33 - Top advocates horizontal list
+     34 - Animated scroll effects
+     35
+     36 ### 3️⃣ ADVOCATE DISCOVERY
+     37 - Advanced search with filters
+     38 - Category-based browsing
+     39 - Sort by: Rating, Price, Reviews
+     40 - Availability filter (Online Now)
+     41 - Advocate cards with:
+     42   - Profile image, name, specialty
+     43   - Rating stars & review count
+     44   - Pricing per consultation
+     45   - Online status indicator
+     46   - "Book Consultation" CTA
+     47 - Buddy Orb (AI matchmaker floating button)
+     48
+     49 ### 4️⃣ AI CASE BUILDER ⭐ (Premium Feature)
+     50 - Conversational AI interface (one question at a time)
+     51 - Groq API integration for legal AI
+     52 - Interactive inputs:
+     53   - Suggestion chips
+     54   - Multiple choice questions
+     55   - Free text with validation
+     56 - Case categories: Family, Corporate, Property, Criminal
+     57 - Real-time preview mode
+     58 - Edit functionality for all fields
+     59 - Case completeness validation
+     60 - Generate case report (PDF export)
+     61 - Conversation history
+     62
+     63 **AI Flow:**
+    User opens → AI greets → Asks case type →
+    Follow-up questions → Extracts details →
+    Preview → Edit → Finalize → Generate PDF
+
+       1
+       2 ### 5️REAL-TIME CHAT SYSTEM
+       3 - GiftedChat or custom chat UI
+       4 - Text messages with read receipts
+       5 - **Voice Messages:**
+       6   - Record with pan gestures
+       7   - Swipe-to-cancel
+       8   - Lock recording
+       9   - Audio waveform visualizer
+      10   - Playback with scrubbing
+      11 - **Media Sharing:**
+      12   - Image capture & gallery
+      13   - Document upload (PDF, DOC)
+      14   - Video recording
+      15 - Message status (sending, sent, delivered, read)
+      16 - Sticky date headers
+      17 - Full-screen image preview
+      18 - Share chat functionality
+      19 - Download media
+      20
+      21 ### 6️⃣ AI CHAT ASSISTANT
+      22 - Legal AI powered by Groq API
+      23 - Indian law specialization
+      24 - Multi-language support:
+      25   - English
+      26   - Hindi (Devanagari)
+      27   - Hinglish
+      28   - Urdu
+      29   - Tamil
+      30   - Telugu
+      31 - **PDF Document Generation:**
+      32   - Legal notices
+      33   - Applications
+      34   - Contracts
+      35   - Trigger: `[DRAFT_DOCUMENT: {...}]`
+      36 - **Voice Mode:**
+      37   - Text-to-speech responses
+      38   - Premium AI voices
+      39   - Multi-language TTS
+      40 - **Image Analysis:**
+      41   - Document OCR
+      42   - Extract text from images
+      43 - Chat history with search
+      44 - Custom themes & emojis per chat
+      45 - Streaming responses
+      46
+      47 ### 7️VIDEO/AUDIO CALLS
+      48 - 1-on-1 video consultations
+      49 - Audio-only calls
+      50 - Call scheduling
+      51 - In-call controls:
+      52   - Mute/unmute
+      53   - Switch camera
+      54   - End call
+      55   - Chat during call
+      56 - Call quality indicators
+      57
+      58 ### 8️⃣ ADVOCATE DASHBOARD
+      59 - Stats overview:
+      60   - Active cases
+      61   - Pending requests
+      62   - Total earnings
+      63   - Average rating
+      64 - Quick actions:
+      65   - New Case button
+      66   - Schedule manager
+      67   - Drafts folder
+      68 - Client Pipeline:
+      69   - Direct requests
+      70   - Daily auto-matched slots
+      71   - Progress bars
+      72 - Today's Schedule:
+      73   - Meeting cards with time
+      74   - Video/In-person badges
+      75   - "Join Call" buttons
+      76 - Recent Activity feed
+      77
+      78 ### 9️⃣ PROFILE & SETTINGS
+      79 - User stats display
+      80 - Premium membership banner
+      81 - Settings menu:
+      82   - Personal Information
+      83   - Notifications
+      84   - Security & Privacy
+      85   - Payment methods
+      86   - App preferences
+      87 - Logout functionality
+      88
+      89 ### 🔟 CASE REPORT SCREEN
+      90 - Generated case summaries
+      91 - PDF preview
+      92 - Download/Share options
+      93 - Print functionality
+      94
+      95 ## 🧩 KEY WIDGETS TO BUILD
+      96
+      97 ### UI Components
+      98 - `CustomButton` (with variants: primary, secondary, outline, ghost)
+      99 - `CustomTextField` (with validation)
+     100 - `Avatar` (with online status)
+     101 - `Badge` (status indicators)
+     102 - `AdvocateCard` (listing card)
+     103 - `CaseCard` (case summary)
+     104 - `MessageBubble` (chat)
+     105 - `AudioPlayer` (voice messages)
+     106 - `TypingIndicator` (AI)
+     107 - `SuggestionChips` (horizontal scroll)
+     108 - `BuddyOrb` (floating AI button)
+     109 - `MatchmakerOverlay` (AI matching)
+     110
+     111 ### Feature Widgets
+     112 - `CaseBuilderConversation` (AI chat interface)
+     113 - `VoiceRecorder` (pan gesture recording)
+     114 - `DocumentPreview` (PDF viewer)
+     115 - `VideoCallView` (Agora integration)
+     116 - `AdvocateList` (grid/list view)
+     117 - `CategoryGrid` (bento-style)
+     118 - `StatsCard` (dashboard stats)
+     119
+     120 ## 🔌 SERVICES TO IMPLEMENT
+     121
+     122 ### API Services
+    abstract class ApiService {
+      Future<Response> get(String path);
+      Future<Response> post(String path, dynamic data);
+      Future<Response> put(String path, dynamic data);
+      Future<Response> delete(String path);
+    }
+
+    class GroqService {
+      Future<String> chatCompletion(List<Message> messages);
+      Future<IntentResult> detectIntent(String text);
+      Future<ChatMetadata> generateMetadata(String conversation);
+      Future<String> streamResponse(List<Message> messages);
+    }
+
+    class ChatService {
+      Stream<List<Message>> getMessages(String chatId);
+      Future<void> sendMessage(Message message);
+      Future<void> sendVoiceMessage(String url, int duration);
+      Future<void> sendImage(String url);
+    }
+
+    class VideoCallService {
+      Future<void> startCall(String userId, bool isVideo);
+      Future<void> endCall();
+      Stream<CallState> get callStateStream;
+    }
+
+     1
+     2 ### State Management (Riverpod Example)
+    // Auth Provider
+    final authStateProvider = StreamProvider<AuthState>((ref) {...});
+    final authControllerProvider = StateNotifierProvider<AuthController, AuthState>((ref) {...});
+
+    // Chat Provider
+    final chatProvider = StateNotifierProvider<ChatController, ChatState>((ref) {...});
+
+    // AI Chat Provider
+    final aiChatProvider = StateNotifierProvider<AIChatController, AIChatState>((ref) {...});
+
+    // Case Builder Provider
+    final caseBuilderProvider = StateNotifierProvider<CaseBuilderController, CaseBuilderState>((ref) {...});
+
+    // Advocate Provider
+    final advocatesProvider = FutureProvider<List<Advocate>>((ref) {...});
+
+     1
+     2 ## 📊 DATA MODELS
+    class User {
+      String id;
+      String name;
+      String email;
+      String phone;
+      String? avatar;
+      bool isPremium;
+      DateTime createdAt;
+    }
+
+    class Advocate {
+      String id;
+      String name;
+      String specialty;
+      int experienceYears;
+      double rating;
+      int reviewCount;
+      double pricePerSession;
+      bool isOnline;
+      List<String> categories;
+      String bio;
+      List<String> availability;
+    }
+
+    class Case {
+      String id;
+      String userId;
+      String category;
+      String description;
+      List<String> parties;
+      DateTime incidentDate;
+      List<String> evidence;
+      List<String> witnesses;
+      String status;
+      DateTime createdAt;
+    }
+
+    class Message {
+      String id;
+      String chatId;
+      String senderId;
+      String content;
+      MessageType type; // text, image, voice, document
+      String? mediaUrl;
+      int? duration; // for voice
+      DateTime timestamp;
+      MessageStatus status; // sending, sent, delivered, read
+    }
+
+    class AIChat {
+      String id;
+      String title;
+      String? emoji;
+      String? themeColor;
+      List<AIMessage> messages;
+      DateTime createdAt;
+      DateTime updatedAt;
+    }
+
+      1
+      2 ## 🎯 ACCEPTANCE CRITERIA
+      3
+      4 ### Must-Have Features
+      5 - ✅ Smooth 60fps animations
+      6 - ✅ Full dark/light theme support
+      7 - ✅ Offline-first architecture
+      8 - ✅ Real-time chat with WebSocket
+      9 - ✅ AI responses < 2 seconds
+     10 - ✅ Voice message recording & playback
+     11 - ✅ PDF generation & preview
+     12 - ✅ Video calling integration
+     13 - ✅ Multi-language support
+     14 - ✅ Secure authentication
+     15
+     16 ### Performance Targets
+     17 - App launch: < 2 seconds
+     18 - Screen transitions: < 300ms
+     19 - Chat message delivery: < 500ms
+     20 - AI response streaming: immediate
+     21 - Image loading: lazy with cache
+     22
+     23 ### Security Requirements
+     24 - JWT token refresh
+     25 - Encrypted local storage
+     26 - Secure API communication (HTTPS)
+     27 - Input validation
+     28 - Rate limiting
+     29
+     30 ## 📦 DEPENDENCIES TO USE
+    dependencies:
+      flutter:
+        sdk: flutter
+
+    State Management
+      flutter_riverpod: ^2.4.0
+      riverpod_annotation: ^2.3.0
+
+    Navigation
+      go_router: ^12.0.0
+
+    Network
+      dio: ^5.4.0
+      web_socket_channel: ^2.4.0
+
+    Local Storage
+      hive: ^2.2.3
+      hive_flutter: ^1.1.0
+      shared_preferences: ^2.2.2
+
+    AI
+      http: ^1.1.0 # For Groq API
+
+    Media
+      image_picker: ^1.0.4
+      file_picker: ^6.1.1
+      audioplayers: ^5.2.1
+      record: ^5.0.4
+
+    Video Call
+      agora_rtc_engine: ^6.3.0
+
+    PDF
+      pdf: ^3.10.7
+      printing: ^5.11.1
+
+    UI
+      flutter_animate: ^4.3.0
+      shimmer: ^3.0.0
+      cached_network_image: ^3.3.0
+
+    Utilities
+      intl: ^0.18.1
+      uuid: ^4.2.1
+      dartz: ^0.10.1 # Either type
+
+      1
+      2 ## 🚀 DELIVERABLES
+      3
+      4 1. **Complete Flutter app** with all screens
+      5 2. **Reusable component library** (20+ widgets)
+      6 3. **API integration** (Groq, Firebase/Supabase)
+      7 4. **State management** setup
+      8 5. **Theme system** with dark mode
+      9 6. **Documentation** for setup & deployment
+     10 7. **Build configuration** for iOS & Android
+     11
+     12 ## 🎨 DESIGN REFERENCES
+     13
+     14 - Clean, modern legal tech aesthetic
+     15 - Apple Human Interface Guidelines
+     16 - Material Design 3 principles
+     17 - Smooth Reanimated-style animations
+     18 - Premium feel throughout
+     19
+     20 ## 📱 PLATFORM SUPPORT
+     21
+     22 - iOS 13+
+     23 - Android 8.0+ (API 26)
+     24 - Responsive for phones & tablets
+     25
+     26 ---
+     27
+     28 **Build this as a production-ready, scalable app that can handle 10,000+ users with real-time features, AI integration, and premium UX throughout.**
+
+    ---
+
+    This prompt gives Flutter developers/AI everything needed to rebuild your AdvoIn app with all features intact! 🚀
+
+  > can u write me all the compontents of the app so that i do a prmopt Engineering (For example it has the feature of AI chat bot and etc )Like list down  all the components it  has once again
+
+  ✦ The user is asking for the same comprehensive component list again. Let me provide a cleaner, more organized version that's specifically optimized for prompt engineering purposes.
+
+  ✦ 📱 AdvoIn (Legal Buddy) - Complete Feature & Component List for Prompt Engineering
+
+    ---
+
+    🎯 APP SUMMARY
+    AdvoIn is a dual-platform legal consulting marketplace with AI-powered assistance, connecting clients with advocates through chat, video calls, and intelligent case building.
+
+    ---
+
+    🔥 CORE FEATURES LIST
+
+    1. AI-POWERED FEATURES
+
+
+    ┌───────────────────────────┬──────────────────────────────────────────────────────────────────────────────────┐
+    │ Feature                   │ Description                                                                      │
+    ├───────────────────────────┼──────────────────────────────────────────────────────────────────────────────────┤
+    │ 🤖 AI Chatbot (Buddy AI)  │ Legal assistant powered by Groq API (Llama 3.3 70B) for Indian law consultations │
+    │ ⚖️ AI Case Builder        │ Conversational AI that builds legal cases through intelligent questioning        │
+    │ 📄 AI Document Generation │ Auto-generates legal PDFs (applications, notices, contracts)                     │
+    │ 🎤 AI Voice Mode          │ Text-to-speech responses in multiple Indian languages                            │
+    │ 🖼️ AI Image Analysis      │ OCR and document extraction from uploaded images                                 │
+    │ 🎯 Intent Detection       │ Auto-routes users to lawyer finder or case builder based on input                │
+    │ 💬 AI Matchmaker          │ Buddy Orb overlay that matches clients with suitable advocates                   │
+    └───────────────────────────┴──────────────────────────────────────────────────────────────────────────────────┘
+
+    ---
+
+    2. AUTHENTICATION & USER MANAGEMENT
+
+
+    ┌───────────────────────┬───────────────────────────────────────────────┐
+    │ Feature               │ Description                                   │
+    ├───────────────────────┼───────────────────────────────────────────────┤
+    │ 🔐 Login System       │ Email/password authentication with JWT        │
+    │ 📝 Registration       │ User signup with profile creation             │
+    │ 👤 User Profiles      │ Client and Advocate profile management        │
+    │ 🔑 Session Management │ Persistent login with Zustand store           │
+    │ 🚪 Secure Logout      │ Token invalidation and session cleanup        │
+    │ 🎭 Dual Roles         │ Separate interfaces for Clients and Advocates │
+    └───────────────────────┴───────────────────────────────────────────────┘
+
+
+    ---
+
+    3. CLIENT FEATURES
+
+    Home Screen
+
+    ┌────────────────────────┬───────────────────────────────────────────────────────────────────┐
+    │ Component              │ Description                                                       │
+    ├────────────────────────┼───────────────────────────────────────────────────────────────────┤
+    │ Hero Section           │ Branding with animated header                                     │
+    │ Smart Search Bar       │ AI-powered legal issue input with intent detection                │
+    │ Quick Chips            │ One-tap suggestions (FIR, Property, Family, Contract)             │
+    │ Category Grid          │ 4 quick-access categories (Family, Corporate, Property, Criminal) │
+    │ Top Advocates List     │ Featured lawyer showcase                                          │
+    │ Animated Scroll Header │ Dynamic header with scroll-based animations                       │
+    └────────────────────────┴───────────────────────────────────────────────────────────────────┘
+
+
+    Explore/Discover Advocates
+
+    ┌────────────────────────┬──────────────────────────────────────────────────────────────────────────┐
+    │ Component              │ Description                                                              │
+    ├────────────────────────┼──────────────────────────────────────────────────────────────────────────┤
+    │ Search Bar             │ Real-time lawyer search                                                  │
+    │ Filter Panel           │ Sort by rating, price, reviews                                           │
+    │ Category Filters       │ 6 practice areas (Criminal, Family, Property, Documents, IPR, Corporate) │
+    │ Availability Toggle    │ "Online Now" filter                                                      │
+    │ Bento Grid Categories  │ Visual category browser                                                  │
+    │ Advocate Cards         │ Profile cards with rating, price, specialty                              │
+    │ Legal Insights Section │ Educational content (courses, guides, tutorials)                         │
+    │ Buddy Orb              │ Floating AI matchmaker button                                            │
+    └────────────────────────┴──────────────────────────────────────────────────────────────────────────┘
+
+
+    AI Case Builder
+
+    ┌────────────────────────┬────────────────────────────────────────┐
+    │ Component              │ Description                            │
+    ├────────────────────────┼────────────────────────────────────────┤
+    │ Conversation Interface │ One-question-at-a-time AI dialogue     │
+    │ Suggestion Chips       │ Quick-reply buttons for common answers │
+    │ MCQ Options            │ Multiple-choice question inputs        │
+    │ Free Text Input        │ Open-ended response field              │
+    │ Typing Indicator       │ AI thinking animation                  │
+    │ Preview Mode           │ Toggle to view case summary anytime    │
+    │ Edit Functionality     │ Modify any field in the case           │
+    │ Case Validation        │ Completeness checking                  │
+    │ Case History Modal     │ View past cases                        │
+    │ Case Report Screen     │ Generate and export case summaries     │
+    │ Conversation Messages  │ AI and user message display            │
+    └────────────────────────┴────────────────────────────────────────┘
+
+
+    Chat & Consultation
+
+    ┌───────────────────────────┬────────────────────────────────────────────┐
+    │ Component                 │ Description                                │
+    ├───────────────────────────┼────────────────────────────────────────────┤
+    │ Real-time Messaging       │ GiftedChat-based chat interface            │
+    │ Voice Recording           │ Pan-gesture recording with swipe-to-cancel │
+    │ Voice Lock                │ Lock recording for hands-free use          │
+    │ Audio Visualizer          │ Live waveform display while recording      │
+    │ Audio Playback            │ Scrubbing and progress control             │
+    │ Image Sharing             │ Camera capture and gallery upload          │
+    │ Document Sharing          │ PDF, DOC file attachments                  │
+    │ Video Sharing             │ Video recording and upload                 │
+    │ Message Status            │ Sent, delivered, read receipts             │
+    │ Sticky Date Headers       │ Date separators in chat                    │
+    │ Full-screen Image Preview │ Zoom and view images                       │
+    │ Share Chat                │ Export conversation                        │
+    │ Download Media            │ Save attachments                           │
+    └───────────────────────────┴────────────────────────────────────────────┘
+
+
+    AI Chat Screen
+
+    ┌────────────────────────┬───────────────────────────────────────────────┐
+    │ Component              │ Description                                   │
+    ├────────────────────────┼───────────────────────────────────────────────┤
+    │ AI Conversation List   │ Chat history with AI                          │
+    │ Streaming Responses    │ Real-time AI text generation                  │
+    │ Multi-language Support │ English, Hindi, Hinglish, Urdu, Tamil, Telugu │
+    │ PDF Trigger Block      │ Special syntax for document generation        │
+    │ Voice Mode Toggle      │ Enable TTS for responses                      │
+    │ Image Upload           │ Send images for AI analysis                   │
+    │ Chat Metadata          │ Auto-generated titles, emojis, themes         │
+    │ Stop Speaking Button   │ Halt TTS playback                             │
+    └────────────────────────┴───────────────────────────────────────────────┘
+
+
+    Profile Screen
+
+    ┌────────────────┬──────────────────────────────────────────────────┐
+    │ Component      │ Description                                      │
+    ├────────────────┼──────────────────────────────────────────────────┤
+    │ User Stats     │ Active Cases, Consults, Saved counts             │
+    │ Premium Banner │ Membership status display                        │
+    │ Settings Menu  │ Personal Info, Notifications, Security, Payments │
+    │ Logout Button  │ Secure sign-out                                  │
+    └────────────────┴──────────────────────────────────────────────────┘
+
+
+    ---
+
+    4. ADVOCATE FEATURES
+
+    Dashboard
+
+    ┌──────────────────────┬──────────────────────────────────────────────────┐
+    │ Component            │ Description                                      │
+    ├──────────────────────┼──────────────────────────────────────────────────┤
+    │ Stats Grid           │ Active Cases, Pending Requests, Earnings, Rating │
+    │ Quick Actions        │ New Case, Schedule, Drafts buttons               │
+    │ Client Pipeline      │ Direct Requests and Daily Pool cards             │
+    │ Progress Bars        │ Visual progress indicators                       │
+    │ Today's Schedule     │ Meeting list with time and type                  │
+    │ Meeting Cards        │ Client name, case type, join button              │
+    │ Video Call Badges    │ Online/In-person indicators                      │
+    │ Recent Activity Feed │ Payment and case updates                         │
+    │ Notification Dot     │ Unread indicator                                 │
+    └──────────────────────┴──────────────────────────────────────────────────┘
+
+
+    Earnings Screen
+
+    ┌────────────────────┬────────────────────────┐
+    │ Component          │ Description            │
+    ├────────────────────┼────────────────────────┤
+    │ Revenue Tracking   │ Total earnings display │
+    │ Payment History    │ Transaction list       │
+    │ Withdrawal Options │ Payout methods         │
+    └────────────────────┴────────────────────────┘
+
+
+    Cases Screen
+
+    ┌───────────────────────┬───────────────────────┐
+    │ Component             │ Description           │
+    ├───────────────────────┼───────────────────────┤
+    │ Case List             │ All assigned cases    │
+    │ Case Details          │ Full case information │
+    │ Client Communication  │ Direct messaging      │
+    │ Document Organization │ Case files management │
+    └───────────────────────┴───────────────────────┘
+
+
+    Settings Screen
+
+    ┌──────────────────────────┬───────────────────────────┐
+    │ Component                │ Description               │
+    ├──────────────────────────┼───────────────────────────┤
+    │ Profile Management       │ Edit advocate profile     │
+    │ Availability Settings    │ Set online/offline status │
+    │ Notification Preferences │ Alert customization       │
+    │ Pricing Settings         │ Consultation fees         │
+    └──────────────────────────┴───────────────────────────┘
+
+    ---
+
+    5. COMMUNICATION FEATURES
+
+
+    ┌───────────────────────┬───────────────────────────────────────────┐
+    │ Feature               │ Description                               │
+    ├───────────────────────┼───────────────────────────────────────────┤
+    │ 📞 Video Calls        │ 1-on-1 video consultations (Agora/WebRTC) │
+    │ 📱 Audio Calls        │ Voice-only consultations                  │
+    │ 💬 Text Chat          │ Real-time messaging with advocates        │
+    │ 🎤 Voice Messages     │ Record and send audio clips               │
+    │ 📎 File Sharing       │ Send documents, images, videos            │
+    │ 📅 Call Scheduling    │ Book consultation time slots              │
+    │ 🔔 Call Notifications │ Incoming call alerts                      │
+    └───────────────────────┴───────────────────────────────────────────┘
+
+    ---
+
+    6. UI COMPONENTS LIBRARY
+
+    Base Components (src/components/ui/)
+
+    ┌──────────────┬─────────────────────────────────────────────────────────────────────┐
+    │ Component    │ Purpose                                                             │
+    ├──────────────┼─────────────────────────────────────────────────────────────────────┤
+    │ Button       │ Animated buttons with variants (primary, secondary, outline, ghost) │
+    │ Input        │ Text inputs with validation                                         │
+    │ Avatar       │ User profile images with status                                     │
+    │ Badge        │ Status indicators and labels                                        │
+    │ ThemedText   │ Typography with theme support (h1, h2, h3, body, caption)           │
+    │ AdvocateCard │ Lawyer listing cards                                                │
+    └──────────────┴─────────────────────────────────────────────────────────────────────┘
+
+
+    Case Builder Components (src/features/case-builder/)
+
+    ┌─────────────────────┬─────────────────────────────────────┐
+    │ Component           │ Purpose                             │
+    ├─────────────────────┼─────────────────────────────────────┤
+    │ CaseBuilderScreen   │ Main AI conversation interface      │
+    │ CaseBuilderInput    │ Custom input field with send button │
+    │ CasePreviewCard     │ Editable case summary display       │
+    │ ConversationMessage │ AI and user message bubbles         │
+    │ QuestionOptions     │ Multiple-choice question UI         │
+    │ SuggestionChips     │ Horizontal quick-reply chips        │
+    │ TypingIndicator     │ AI thinking animation               │
+    │ CaseHistoryModal    │ Past cases browser                  │
+    │ CaseListItem        │ Individual case in list             │
+    │ CaseReportScreen    │ Case summary report view            │
+    └─────────────────────┴─────────────────────────────────────┘
+
+
+    Buddy AI Components (src/features/buddy-ai/)
+
+    ┌───────────────────┬────────────────────────────────┐
+    │ Component         │ Purpose                        │
+    ├───────────────────┼────────────────────────────────┤
+    │ BuddyOrb          │ Floating AI assistant button   │
+    │ MatchmakerOverlay │ AI advocate matching interface │
+    └───────────────────┴────────────────────────────────┘
+
+
+    Advocate Components (src/features/advocates/)
+
+    ┌───────────────────────┬──────────────────────────────┐
+    │ Component             │ Purpose                      │
+    ├───────────────────────┼──────────────────────────────┤
+    │ AdvocateList          │ FlashList of lawyer cards    │
+    │ AdvocateProfileScreen │ Detailed lawyer profile view │
+    │ AdvocateDashboard     │ Advocate home screen         │
+    └───────────────────────┴──────────────────────────────┘
+
+
+    Consultation Components (src/features/consultation/)
+
+    ┌────────────┬─────────────────────────────────┐
+    │ Component  │ Purpose                         │
+    ├────────────┼─────────────────────────────────┤
+    │ ChatScreen │ Full-featured consultation chat │
+    │ CallScreen │ Video/audio call interface      │
+    └────────────┴─────────────────────────────────┘
+
+    ---
+
+    7. STATE MANAGEMENT
+
+
+    ┌──────────────────┬─────────────────────────────────────┐
+    │ Store            │ Purpose                             │
+    ├──────────────────┼─────────────────────────────────────┤
+    │ authStore        │ User authentication state (Zustand) │
+    │ useAdvocateStore │ Advocate data and filtering         │
+    │ useCaseStore     │ Case builder conversation state     │
+    │ useAIChatStore   │ AI chat history and metadata        │
+    └──────────────────┴─────────────────────────────────────┘
+
+    ---
+
+    8. CONTEXT PROVIDERS
+
+
+    ┌───────────────┬────────────────────────────┐
+    │ Context       │ Purpose                    │
+    ├───────────────┼────────────────────────────┤
+    │ HeaderContext │ Shared header scroll state │
+    │ AuthContext   │ Authentication context     │
+    └───────────────┴────────────────────────────┘
+
+
+    ---
+
+    9. SERVICES & APIs
+
+
+    ┌──────────────────┬──────────────────────────────────────────────────────────────┐
+    │ Service          │ Purpose                                                      │
+    ├──────────────────┼──────────────────────────────────────────────────────────────┤
+    │ GroqService      │ AI/LLM integration (chat, intent detection, metadata, voice) │
+    │ ChatService      │ Real-time messaging backend                                  │
+    │ VideoCallService │ Video/audio call handling                                    │
+    │ PDFService       │ Document generation and export                               │
+    │ MockAdvocates    │ Sample lawyer data                                           │
+    │ MockChat         │ Sample conversations                                         │
+    └──────────────────┴──────────────────────────────────────────────────────────────┘
+
+    ---
+
+    10. UTILITIES & HOOKS
+
+
+    ┌─────────────────────┬─────────────────────────────────┐
+    │ Utility/Hook        │ Purpose                         │
+    ├─────────────────────┼─────────────────────────────────┤
+    │ useLegalTheme       │ Theme management (light/dark)   │
+    │ useScreenTransition │ Animation transitions           │
+    │ useCaseBuilder      │ Case builder conversation logic │
+    │ caseValidation      │ Case completeness checks        │
+    │ aiParser            │ AI response parsing             │
+    │ navigationConfig    │ Navigation setup                │
+    │ utils (cn)          │ Class name utilities            │
+    └─────────────────────┴─────────────────────────────────┘
+
+    ---
+
+    11. CONSTANTS
+
+
+    ┌────────────────┬───────────────────────────────────────────────────────────────┐
+    │ Constant       │ Purpose                                                       │
+    ├────────────────┼───────────────────────────────────────────────────────────────┤
+    │ caseCategories │ Case type definitions (Family, Corporate, Property, Criminal) │
+    │ Colors         │ Theme color palette                                           │
+    │ GROQ_MODELS    │ AI model configurations                                       │
+    └────────────────┴───────────────────────────────────────────────────────────────┘
+
+    ---
+
+    12. TYPESCRIPT TYPES
+
+
+    ┌───────────────────┬───────────────────────────┐
+    │ Type File         │ Purpose                   │
+    ├───────────────────┼───────────────────────────┤
+    │ case.types.ts     │ Case interfaces and types │
+    │ useAIChatStore.ts │ AI chat message types     │
+    │ Advocate types    │ Lawyer data structures    │
+    └───────────────────┴───────────────────────────┘
+
+    ---
+
+    📱 SCREEN ROUTES
+
+    Client Routes
+
+      1 /(client)/(tabs)/index.tsx          → Home Screen
+      2 /(client)/(tabs)/explore.tsx        → Explore Advocates
+      3 /(client)/(tabs)/create-case.tsx    → AI Case Builder
+      4 /(client)/(tabs)/chats.tsx          → Messages List
+      5 /(client)/(tabs)/profile.tsx        → User Profile
+      6
+      7 /chat/[id].tsx                      → Consultation Chat
+      8 /chat/ai/[id].tsx                   → AI Chat Assistant
+      9 /call/[id].tsx                      → Video/Audio Call
+     10 /case-report/[id].tsx               → Case Report
+     11 /advocate/[id].tsx                  → Advocate Profile
+
+    Advocate Routes
+
+     1 /(advocate)/(tabs)/index.tsx        → Dashboard
+     2 /(advocate)/(tabs)/cases.tsx        → Cases Management
+     3 /(advocate)/(tabs)/earnings.tsx     → Earnings
+     4 /(advocate)/(tabs)/settings.tsx     → Settings
+
+    Auth Routes
+
+     1 /(auth)/index.tsx                   → Login
+     2 /(auth)/register.tsx                → Registration
+
+    ---
+
+    🎨 DESIGN SYSTEM
+
+    Color Palette
+
+     1 Primary Navy:    #0F172A
+     2 Secondary Steel: #3B82F6
+     3 Slate:           #64748B
+     4 Ice (BG Light):  #F8FAFC
+     5 Charcoal:        #1F2937
+     6 Crimson:         #E11D48
+     7 Dark BG:         #0A0A0A
+
+    Typography Scale
+
+     1 h1: 32px Bold
+     2 h2: 24px Bold
+     3 h3: 20px SemiBold
+     4 body: 16px Regular
+     5 caption: 12-13px Medium
+
+    Animations
+     - React Native Reanimated transitions
+     - Spring physics
+     - Fade in/out
+     - Layout animations
+     - Gesture-based interactions
+     - Scroll-based header effects
+
+    ---
+
+    🔧 TECHNICAL STACK
+
+
+    ┌─────────────┬───────────────────────────────────────────┐
+    │ Category    │ Technology                                │
+    ├─────────────┼───────────────────────────────────────────┤
+    │ Framework   │ React Native 0.81.5 + Expo SDK 54         │
+    │ Language    │ TypeScript                                │
+    │ Styling     │ NativeWind (Tailwind CSS)                 │
+    │ Navigation  │ Expo Router 6.0 + React Navigation 7.x    │
+    │ State       │ Zustand                                   │
+    │ Animations  │ React Native Reanimated                   │
+    │ Icons       │ Lucide React Native                       │
+    │ AI Backend  │ Groq API (Llama 3.3 70B)                  │
+    │ Chat UI     │ react-native-gifted-chat                  │
+    │ Markdown    │ react-native-markdown-display             │
+    │ Voice       │ expo-speech + expo-av                     │
+    │ Media       │ expo-image-picker, expo-document-picker   │
+    │ Video Calls │ Custom implementation (Agora ready)       │
+    │ Storage     │ @react-native-async-storage/async-storage │
+    │ Lists       │ @shopify/flash-list                       │
+    └─────────────┴───────────────────────────────────────────┘
+
+
+    ---
+
+    ✨ UNIQUE SELLING POINTS
+
+     1. Dual-Platform - Separate apps for Clients & Advocates
+     2. AI-Powered Legal Assistant - Groq-powered Indian law expert
+     3. Conversational Case Builder - No forms, pure dialogue
+     4. Multi-Lingual - 6+ Indian languages (English, Hindi, Hinglish, Urdu, Tamil, Telugu)
+     5. PDF Generation - Auto-draft legal documents
+     6. Voice Mode - TTS for AI responses
+     7. Advanced Voice Messages - Swipe-to-cancel, lock, visualizer
+     8. Smart Matching - AI advocate recommendations
+     9. Real-Time Chat - Full-featured messaging
+     10. Video Consultations - Built-in calling
+     11. Dark Mode - Complete theme support
+     12. Offline-First - AsyncStorage persistence
+
+    ---
+
+    📊 FEATURE COUNT SUMMARY
+
+
+    ┌────────────────────────┬───────┐
+    │ Category               │ Count │
+    ├────────────────────────┼───────┤
+    │ Major Features         │ 12    │
+    │ Screens/Routes         │ 18    │
+    │ UI Components          │ 25+   │
+    │ State Stores           │ 4     │
+    │ Services               │ 5     │
+    │ Custom Hooks           │ 3     │
+    │ AI Features            │ 7     │
+    │ Communication Features │ 7     │
+    │ Supported Languages    │ 6     │
+    │ Case Categories        │ 6     │
+    └────────────────────────┴───────┘
+
+    ---
+
+    This comprehensive list covers every component, feature, screen, service, and utility in your AdvoIn app for prompt engineering purposes! 🚀⚖️
